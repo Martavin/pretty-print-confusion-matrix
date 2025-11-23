@@ -55,9 +55,9 @@ array = np.array([[13,  0,  1,  0,  2,  0],
                   [0,  0,  0,  0,  0, 20]])
 
 # get pandas dataframe
-df_cm = pd.DataFrame(array, index=range(1, 7), columns=range(1, 7))
-# colormap: see this and choose your more dear
-cmap = 'PuRd'
+# change axis' labels to class names to make the interpretation easier
+labels = ['Dog', 'Cat', 'Mouse', 'Fox', 'Bird', 'Chicken']
+df_cm = pd.DataFrame(array, index=labels, columns=labels)
 pp_matrix(df_cm, cmap=cmap)
 ```
 ![alt text](https://raw.githubusercontent.com/khuyentran1401/pretty-print-confusion-matrix/master/Screenshots/Conf_matrix_default.png)
